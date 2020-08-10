@@ -193,7 +193,20 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    status_command i3status
+
+    colors {
+        background $nord0
+        statusline $nord6
+        separator  $nord9
+
+        # State            Border  Backgr  Text
+        focused_workspace  $nord9  $nord1  $nord6
+        active_workspace   $nord9  $nord1  $nord6
+        inactive_workspace $nord0  $nord0  $nord6
+        binding_mode       $nord12 $nord0  $nord6
+        urgent_workspace   $nord12 $nord12 $nord6
+    }
 }
 
 # Gaps
@@ -209,3 +222,29 @@ smart_gaps on
 # Activate smart borders (always)
 smart_borders on
 
+# Nord Color Palette
+set $nord0   #2E3440
+set $nord1   #3B4252
+set $nord2   #434C5E
+set $nord3   #4C566A
+set $nord4   #D8DEE9
+set $nord5   #E5E9F0
+set $nord6   #ECEFF4
+set $nord7   #8FBCBB
+set $nord8   #88C0D0
+set $nord9   #81A1C1
+set $nord10  #5E81AC
+set $nord11  #BF616A
+set $nord12  #D08770
+set $nord13  #EBCB8B
+set $nord14  #A3BE8C
+set $nord15  #B48EAD
+
+# Theme colors
+# class                 border  backgr. text    indic.  child_border
+client.focused          $nord4  $nord1  $nord4  $nord4  $nord4
+client.focused_inactive $nord0  $nord0  $nord9  $nord4  $nord0
+client.unfocused        $nord0  $nord0  $nord9  $nord4  $nord0
+client.urgent           $nord12 $nord0  $nord8  $nord4  $nord12
+client.placeholder      #000000 #0c0c0c #ffffff #000000
+client.background       $nord0
