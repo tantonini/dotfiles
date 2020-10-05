@@ -30,6 +30,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Set wallpaper, wallpapers shall be located at ~/Pictures/Wallpapers/
+exec_always --no-startup-id ~/.fehbg &
+
 # Set a scratchpad with terminal instance
 exec --no-startup-id i3-sensible-terminal -n dropdown
 for_window [instance="dropdown"] move scratchpad
