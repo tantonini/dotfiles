@@ -159,6 +159,10 @@ assign [class="Google-chrome"] $ws6
 assign [class="Microsoft Teams - Preview"] $ws7
 for_window [class="Spotify"] move to workspace $ws10
 
+for_window [title="Microsoft Teams Notification"] floating enable
+no_focus [title="Microsoft Teams Notification"]
+for_window [class="Pavucontrol"] floating enable
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
