@@ -208,6 +208,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# i3 display layout
+set $display_layout Display layout: (1) Laptop only, (2) HDMI only, (3) HDMI left, (4) HDMI right, (5) Dock only, (6) Dock left, (7) Dock right, (8) Clone
+mode "$display_layout" {
+    bindsym 1 exec ~/.config/i3/i3-display-configuration.sh 1, mode "default"
+    bindsym 2 exec ~/.config/i3/i3-display-configuration.sh 2, mode "default"
+    bindsym 3 exec ~/.config/i3/i3-display-configuration.sh 3, mode "default"
+    bindsym 4 exec ~/.config/i3/i3-display-configuration.sh 4, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "$display_layout"
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
