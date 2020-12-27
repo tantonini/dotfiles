@@ -117,6 +117,17 @@ set $ws8 "8: term"
 set $ws9 "9: term"
 set $ws10 "10: mus"
 
+workspace $ws1  output primary
+workspace $ws2  output primary
+workspace $ws3  output primary
+workspace $ws4  output primary
+workspace $ws5  output primary
+workspace $ws6  output DP-4 primary
+workspace $ws7  output DP-4 primary
+workspace $ws8  output DP-4 primary
+workspace $ws9  output DP-4 primary
+workspace $ws10 output DP-4 primary
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
