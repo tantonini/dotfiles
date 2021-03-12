@@ -21,6 +21,7 @@ if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
 set list                " Show invisible characters.
+set signcolumn=yes      " Always show the signcolumn for avoiding shifting the window each time
 " }}}
 
 " General {{{
