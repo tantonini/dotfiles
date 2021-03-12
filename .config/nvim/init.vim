@@ -11,7 +11,10 @@ call plug#end()
 " }}}
 
 " Style {{{
-set termguicolors	" Needed for having true colors (24-bit colors)
+set termguicolors       " Needed for having true colors (24-bit colors)
+let g:nord_italic=1
+let g:nord_italic_comments=1
+let g:nord_underline=1
 colorscheme nord
 if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
