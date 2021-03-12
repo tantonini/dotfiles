@@ -6,6 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'airblade/vim-gitgutter'   " For git diff preview in sign column
 Plug 'arcticicestudio/nord-vim'
+Plug 'tpope/vim-fugitive'       " For :Gblame, etc...
 
 " Initialize plugin system
 call plug#end()
