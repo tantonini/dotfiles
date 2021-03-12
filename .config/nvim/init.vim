@@ -31,6 +31,7 @@ set expandtab           " Converts tabs to spaces
 " }}}
 
 " Mouse {{{
+set mouse=nv
 " }}}
 
 " Keyboard shortcuts {{{
