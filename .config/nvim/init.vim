@@ -4,6 +4,7 @@
 " Specify a directory for plugins
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'airblade/vim-gitgutter'   " For git diff preview in sign column
 Plug 'arcticicestudio/nord-vim'
 
 " Initialize plugin system
@@ -31,6 +32,7 @@ set tabstop=4           " Insert 4 spaces for a tab
 set shiftwidth=4        " Change the number of space characters inserted for indentation
 set smarttab
 set expandtab           " Converts tabs to spaces
+set updatetime=100
 " }}}
 
 " Mouse {{{
