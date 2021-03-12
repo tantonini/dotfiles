@@ -16,6 +16,10 @@ colorscheme nord
 " }}}
 
 " General {{{
+set number              " Set line number
+set autoindent          " Enable auto indent
+set smartindent         " Indent after {, remove when starting with #, etc...
+set noswapfile
 " }}}
 
 " Mouse {{{
