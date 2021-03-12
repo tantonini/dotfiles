@@ -13,6 +13,10 @@ call plug#end()
 " Style {{{
 set termguicolors	" Needed for having true colors (24-bit colors)
 colorscheme nord
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
+set list                " Show invisible characters.
 " }}}
 
 " General {{{
