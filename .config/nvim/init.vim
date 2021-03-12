@@ -24,6 +24,10 @@ set number              " Set line number
 set autoindent          " Enable auto indent
 set smartindent         " Indent after {, remove when starting with #, etc...
 set noswapfile
+set tabstop=4           " Insert 4 spaces for a tab
+set shiftwidth=4        " Change the number of space characters inserted for indentation
+set smarttab
+set expandtab           " Converts tabs to spaces
 " }}}
 
 " Mouse {{{
