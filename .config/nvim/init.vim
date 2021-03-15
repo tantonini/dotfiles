@@ -6,6 +6,8 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'airblade/vim-gitgutter'   " For git diff preview in sign column
 Plug 'arcticicestudio/nord-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'       " For :Gblame, etc...
 
@@ -46,6 +48,9 @@ set mouse=nv
 " }}}
 
 " Leaders {{{
+" fzf {{{
+nnoremap <silent> <leader>f :Files<CR>
+" }}}
 " }}}
 
 " Plugins {{{
