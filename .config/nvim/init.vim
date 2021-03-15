@@ -48,6 +48,7 @@ set mouse=nv
 " }}}
 
 " Leaders {{{
+let g:mapleader = "\<Space>"
 " fzf {{{
 nnoremap <silent> <leader>f :Files<CR>
 " }}}
