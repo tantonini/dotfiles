@@ -9,6 +9,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'       " For :Gblame, etc...
 
 " Initialize plugin system
@@ -45,12 +46,18 @@ set mouse=nv
 " }}}
 
 " Keyboard shortcuts {{{
+" NERDTree {{{
+nnoremap <C-t> :NERDTreeToggle<CR>
+" }}}
 " }}}
 
 " Leaders {{{
 let g:mapleader = "\<Space>"
 " fzf {{{
 nnoremap <silent> <leader>f :Files<CR>
+" }}}
+" NERDTree {{{
+nnoremap <leader>n :NERDTreeToggle<CR>
 " }}}
 " }}}
 
@@ -104,5 +111,12 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+" }}}
+" NERDTree {{{
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " }}}
 " }}}
