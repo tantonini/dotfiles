@@ -10,6 +10,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
+Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'       " For :Gblame, etc...
 
 " Initialize plugin system
@@ -58,6 +59,12 @@ nnoremap <silent> <leader>f :Files<CR>
 " }}}
 " NERDTree {{{
 nnoremap <leader>n :NERDTreeToggle<CR>
+" }}}
+" vimspector {{{
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
 " }}}
 " }}}
 
@@ -118,5 +125,8 @@ autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" }}}
+" vimspector {{{
+let g:vimspector_enable_mappings = 'HUMAN'
 " }}}
 " }}}
