@@ -7,6 +7,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'airblade/vim-gitgutter'   " For git diff preview in sign column
 Plug 'arcticicestudio/nord-vim'
 Plug 'caenrique/nvim-toggle-terminal'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -120,6 +121,35 @@ endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
+" }}}
+" Lightline {{{
+set noshowmode  " Disable showing the mode, done by lightline
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
+" Following lines permit to show cwd in the tabline
+function! CustomTabname(n) abort
+  return fnamemodify(getcwd(tabpagewinnr(a:n), a:n), ':t')
+endfunction
+
+let g:lightline.tab_component_function = {
+      \ 'custom_tabname': 'CustomTabname',
+      \ 'modified': 'lightline#tab#modified',
+      \ 'readonly': 'lightline#tab#readonly',
+      \ 'tabnum': 'lightline#tab#tabnum'
+      \ }
+
+let g:lightline.tab = {
+      \ 'active': [ 'tabnum', 'custom_tabname', 'modified' ],
+      \ 'inactive': [ 'tabnum', 'custom_tabname', 'modified' ] }
 " }}}
 " NERDTree {{{
 " Start NERDTree and put the cursor back in the other window.
