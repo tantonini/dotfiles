@@ -48,6 +48,7 @@ set mouse=nv
 " }}}
 
 " Keyboard shortcuts {{{
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>" " Return to normal mode with Esc in terminal mode
 " NERDTree {{{
 nnoremap <C-t> :NERDTreeToggle<CR>
 " }}}
