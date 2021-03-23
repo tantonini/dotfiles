@@ -6,6 +6,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'airblade/vim-gitgutter'   " For git diff preview in sign column
 Plug 'arcticicestudio/nord-vim'
+Plug 'caenrique/nvim-toggle-terminal'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -125,6 +126,11 @@ autocmd VimEnter * NERDTree | wincmd p
 
 " Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" }}}
+" nvim toggle {{{
+nnoremap <silent> <C-z> :ToggleTabTerminal<Enter>
+tnoremap <silent> <C-z> <C-\><C-n>:ToggleTabTerminal<Enter>
+let g:auto_start_insert=1
 " }}}
 " vimspector {{{
 let g:vimspector_enable_mappings = 'HUMAN'
