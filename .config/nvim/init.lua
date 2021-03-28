@@ -1,0 +1,2 @@
+-- General
+require('settings')
