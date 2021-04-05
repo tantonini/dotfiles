@@ -5,5 +5,6 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use 'arcticicestudio/nord-vim'
+  use 'itchyny/lightline.vim'
   use 'preservim/nerdtree'
 end)
