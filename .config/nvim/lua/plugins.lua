@@ -7,5 +7,6 @@ return require('packer').startup(function()
   use 'arcticicestudio/nord-vim'
   use 'hrsh7th/nvim-compe'
   use 'itchyny/lightline.vim'
+  use 'neovim/nvim-lspconfig'
   use 'preservim/nerdtree'
 end)
