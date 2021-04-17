@@ -9,4 +9,5 @@ return require('packer').startup(function()
   use 'itchyny/lightline.vim'
   use 'neovim/nvim-lspconfig'
   use 'preservim/nerdtree'
+  use 'tpope/vim-fugitive'
 end)
