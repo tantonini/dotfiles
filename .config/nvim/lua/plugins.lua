@@ -9,6 +9,10 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-compe'
   use 'itchyny/lightline.vim'
   use 'neovim/nvim-lspconfig'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
   use 'preservim/nerdtree'
   use 'tpope/vim-fugitive'
 end)
