@@ -128,28 +128,33 @@ let g:lightline = {
       \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'readonly', 'relativepath', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \               [ 'percent' ],
+      \               [ 'fileformat', 'fileencoding', 'filetype' ] ],
       \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \ 'inactive': {
+      \   'left': [ [ 'relativepath' ],
+      \              [ 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \               [ 'percent' ] ],
+      \ },
+      \ 'tabline': {
+      \   'left': [ [ 'tabs' ] ],
+      \   'right': [ [ 'close' ] ],
+      \ },
+      \ 'tab': {
+      \   'active': [ 'tabnum', 'cwd', 'filename', 'modified' ],
+      \   'inactive': [ 'tabnum', 'cwd', 'filename', 'modified' ],
+      \ },
+      \ 'tab_component_function': {
+      \    'cwd': 'LightlineCurrentDirectory',
       \ },
       \ }
 
-" Following lines permit to show cwd in the tabline
-function! CustomTabname(n) abort
+function! LightlineCurrentDirectory(n) abort
   return fnamemodify(getcwd(tabpagewinnr(a:n), a:n), ':t')
 endfunction
-
-let g:lightline.tab_component_function = {
-      \ 'custom_tabname': 'CustomTabname',
-      \ 'modified': 'lightline#tab#modified',
-      \ 'readonly': 'lightline#tab#readonly',
-      \ 'tabnum': 'lightline#tab#tabnum'
-      \ }
-
-let g:lightline.tab = {
-      \ 'active': [ 'tabnum', 'custom_tabname', 'modified' ],
-      \ 'inactive': [ 'tabnum', 'custom_tabname', 'modified' ] }
 " }}}
 " NERDTree {{{
 " Start NERDTree and put the cursor back in the other window.
