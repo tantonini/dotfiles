@@ -1,6 +1,7 @@
 -- vim.[bw]o.{option} functions don't work correctly, wait for the vim.opt function to be added
 -- https://github.com/neovim/neovim/pull/13479
 
+vim.cmd('let mapleader = " "')
 vim.cmd('set autoindent')
 vim.cmd('set expandtab')            -- Use spaces to insert a <Tab>
 vim.cmd('set list')                 -- Print invisible characters, see listchars
