@@ -8,6 +8,7 @@ require('p-nerdtree')
 require('p-nord-vim')
 require('p-nvim-compe')
 require('p-telescope')
+require('p-vimspector')
 
 -- LSP
 require('lsp')
