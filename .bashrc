@@ -30,4 +30,7 @@ fi
 
 set_ps1
 
+# Aliases
+alias ll='ls -al --color=auto' 2>/dev/null
+
 unset rc
