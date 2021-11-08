@@ -1,7 +1,7 @@
 # .bashrc
 
 set_ps1 () {
-    PS1="[\u@\h \w]\\$ "
+    PS1="\[\033[38;5;246m\][\[$(tput sgr0)\]\[\033[38;5;117m\]\u@\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;117m\]\w\[$(tput sgr0)\]\[\033[38;5;246m\]]\[$(tput sgr0)\]\\$ "
 }
 
 # Source global definitions
