@@ -1,5 +1,9 @@
 # .bashrc
 
+set_ps1 () {
+    PS1="[\u@\h \W]\\$ "
+}
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -23,5 +27,7 @@ if [ -d ~/.bashrc.d ]; then
 		fi
 	done
 fi
+
+set_ps1
 
 unset rc
