@@ -1,7 +1,7 @@
 # .bashrc
 
 set_ps1 () {
-    PS1="[\u@\h \W]\\$ "
+    PS1="[\u@\h \w]\\$ "
 }
 
 # Source global definitions
