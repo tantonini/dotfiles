@@ -30,6 +30,9 @@ fi
 
 set_ps1
 
+# Activate dir colors
+test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
+
 # Aliases
 alias ll='ls -al --color=auto' 2>/dev/null
 
