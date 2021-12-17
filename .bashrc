@@ -35,5 +35,6 @@ test -r ~/.dir_colors && eval $(dircolors ~/.dir_colors)
 
 # Aliases
 alias ll='ls -al --color=auto' 2>/dev/null
+alias l='ls -al --color=auto' 2>/dev/null
 
 unset rc
