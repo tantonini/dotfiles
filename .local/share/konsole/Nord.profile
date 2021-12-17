@@ -6,3 +6,6 @@ Font=Hack,12,-1,5,50,0,0,0,0,0
 Name=Nord
 Parent=FALLBACK/
 ShowTerminalSizeHint=false
+
+[Scrolling]
+HistorySize=10000
