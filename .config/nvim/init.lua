@@ -1,1 +1,2 @@
+require "keymaps"
 require "options"
