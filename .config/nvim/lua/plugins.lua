@@ -27,6 +27,13 @@ return require('packer').startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
+  -- Colorschemes
+  use "EdenEast/nightfox.nvim"
+  use "folke/tokyonight.nvim"
+  use "ful1e5/onedark.nvim"
+  use "marko-cerovac/material.nvim"
+  use "shaunsingh/nord.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
