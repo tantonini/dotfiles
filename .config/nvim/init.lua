@@ -1,4 +1,5 @@
 require "colorschemes"
 require "keymaps"
 require "options"
+require "p-cmp"
 require "plugins"
