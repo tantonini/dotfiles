@@ -63,6 +63,14 @@ return require('packer').startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Nvim tree
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
