@@ -17,3 +17,9 @@ keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- Toggleterm
+-- Use a different terminal per tab
+keymap("n", "<c-t>", "<cmd>exe tabpagenr() . 'ToggleTerm'<cr>", opts)
+keymap("i", "<c-t>", "<cmd>exe tabpagenr() . 'ToggleTerm'<cr>", opts)
+keymap("t", "<c-t>", "<cmd>exe tabpagenr() . 'ToggleTerm'<cr>", opts)
