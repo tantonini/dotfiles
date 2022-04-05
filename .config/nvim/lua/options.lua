@@ -69,7 +69,8 @@ local options = {
   updatetime = 300,                        -- faster completion (4000ms default)
   -- wrap = false,                            -- display lines as one long line
   -- writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-  tabline = "%!MyTabLine()"
+  tabline = "%!MyTabLine()",
+  wildmode = "longest:full"
 }
 
 for k, v in pairs(options) do
