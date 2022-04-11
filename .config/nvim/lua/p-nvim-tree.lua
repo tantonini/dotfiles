@@ -4,21 +4,18 @@ autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tab
 
 vim.g.nvim_tree_add_trailing = 1
 vim.g.nvim_tree_highlight_opened_files = 1
-vim.g.nvim_tree_indent_markers = 1
 
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
 vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
+  default = "",
+  symlink = "",
   git = {
-    unstaged = "",
-    staged = "S",
+    unstaged = "✗",
+    staged = "✓",
     unmerged = "",
     renamed = "➜",
+    untracked = "★",
     deleted = "",
-    untracked = "U",
-    ignored = "◌",
+    ignored = "◌"
   },
   folder = {
     arrow_open = "",
@@ -28,7 +25,8 @@ vim.g.nvim_tree_icons = {
     empty = "",
     empty_open = "",
     symlink = "",
-  },
+    symlink_open = "",
+  }
 }
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
@@ -49,14 +47,15 @@ nvim_tree.setup {
   auto_reload_on_write = true,
   disable_netrw = false,
   hide_root_folder = false,
-  hijack_cursor = true,
+  hijack_cursor = false,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
   open_on_setup = false,
+  open_on_setup_file = false,
   open_on_tab = false,
   sort_by = "name",
-  update_cwd = true,
+  update_cwd = false,
   view = {
     width = 30,
     height = 30,
@@ -69,6 +68,16 @@ nvim_tree.setup {
       custom_only = false,
       list = {
         -- user mappings go here
+      },
+    },
+  },
+  renderer = {
+    indent_markers = {
+      enable = true,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
       },
     },
   },
@@ -107,6 +116,7 @@ nvim_tree.setup {
     timeout = 400,
   },
   actions = {
+    use_system_clipboard = true,
     change_dir = {
       enable = true,
       global = false,
