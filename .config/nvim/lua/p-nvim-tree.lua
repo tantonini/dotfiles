@@ -6,8 +6,8 @@ vim.g.nvim_tree_add_trailing = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 
 vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
+  default = "",
+  symlink = "",
   git = {
     unstaged = "✗",
     staged = "✓",
@@ -47,7 +47,7 @@ nvim_tree.setup {
   auto_reload_on_write = true,
   disable_netrw = false,
   hide_root_folder = false,
-  hijack_cursor = false,
+  hijack_cursor = true,
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
@@ -55,7 +55,7 @@ nvim_tree.setup {
   open_on_setup_file = false,
   open_on_tab = false,
   sort_by = "name",
-  update_cwd = false,
+  update_cwd = true,
   view = {
     width = 30,
     height = 30,
