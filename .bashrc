@@ -17,3 +17,5 @@ alias ll='ls -alh --color=auto'
 PS1="\[\033[38;5;246m\][\[$(tput sgr0)\]\[\033[38;5;117m\]\u@\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;117m\]\w\[$(tput sgr0)\]\[\033[38;5;246m\]]\[$(tput sgr0)\]\\$ "
 
 export PATH=~/.local/bin:"$PATH"
+
+[[ -f ~/.bash_local ]] && . "$HOME/.bash_local"
