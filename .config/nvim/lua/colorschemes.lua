@@ -52,7 +52,7 @@ end
 
 vim.cmd [[
 try
-  colorscheme nord
+  colorscheme nordfox
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
