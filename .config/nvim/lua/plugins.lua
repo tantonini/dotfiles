@@ -28,10 +28,12 @@ return require('packer').startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
   -- Colorschemes
+  use { "catppuccin/nvim", as = "catppuccin" }
   use "EdenEast/nightfox.nvim"
   use "folke/tokyonight.nvim"
-  use "ful1e5/onedark.nvim"
+  use "navarasu/onedark.nvim"
   use "marko-cerovac/material.nvim"
+  use "rebelot/kanagawa.nvim"
   use "shaunsingh/nord.nvim"
 
   -- cmp plugins
