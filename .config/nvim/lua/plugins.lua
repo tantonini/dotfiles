@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   use "navarasu/onedark.nvim"
   use "marko-cerovac/material.nvim"
   use "rebelot/kanagawa.nvim"
+  use 'rmehri01/onenord.nvim'
   use "shaunsingh/nord.nvim"
 
   -- cmp plugins
