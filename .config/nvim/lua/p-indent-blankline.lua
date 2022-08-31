@@ -5,7 +5,7 @@ end
 
 vim.opt.listchars:append "trail:⋅"
 vim.opt.listchars:append "lead:⋅"
-vim.opt.listchars:append "tab:> "
+vim.opt.listchars:append "tab:>—"
 
 indent_blankline.setup {
     show_current_context = true,
