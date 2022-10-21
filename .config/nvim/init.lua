@@ -1,7 +1,7 @@
 require "core/colorschemes"
 require "core/keymaps"
 require "core/options"
-require "lsp"
+require "lsp/lspconfig"
 require "plugins"
 require "plugins/gitsigns"
 require "plugins/indent-blankline"
