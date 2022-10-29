@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 vim.opt.listchars:append "trail:⋅"
-vim.opt.listchars:append "lead:⋅"
+vim.opt.listchars:append "lead: "
 vim.opt.listchars:append "tab:>—"
 
 indent_blankline.setup {
