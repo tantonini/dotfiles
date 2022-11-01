@@ -1,3 +1,5 @@
 .local/share/fonts/.uuid
 .config/i3/i3-display-configuration.sh
 .config/nvim/plugin
+.config/nvim/projects/*
+!.config/nvim/projects/linux.lua
