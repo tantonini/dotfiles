@@ -1,0 +1,4 @@
+[core]
+        editor = vim
+[alias]
+        fap = fetch --all --prune --tags
