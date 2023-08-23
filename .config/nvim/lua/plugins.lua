@@ -88,6 +88,9 @@ return require('packer').startup(function(use)
   -- Character for colorcolumn
   use "lukas-reineke/virt-column.nvim"
 
+  -- Display key bindings
+  use "folke/which-key.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
