@@ -27,16 +27,6 @@ return require('packer').startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
-  -- Colorschemes
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use "EdenEast/nightfox.nvim"
-  use "folke/tokyonight.nvim"
-  use "navarasu/onedark.nvim"
-  use "marko-cerovac/material.nvim"
-  use "rebelot/kanagawa.nvim"
-  use 'rmehri01/onenord.nvim'
-  use "shaunsingh/nord.nvim"
-
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
