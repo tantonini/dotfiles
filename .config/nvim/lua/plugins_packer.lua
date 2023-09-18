@@ -52,9 +52,6 @@ return require('packer').startup(function(use)
     run = ":TSUpdate"
   }
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
-
   -- Toggle terminal
   use {"akinsho/toggleterm.nvim"}
 
