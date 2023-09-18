@@ -45,9 +45,6 @@ return require('packer').startup(function(use)
   -- Toggle terminal
   use {"akinsho/toggleterm.nvim"}
 
-  -- Vim fugitive
-  use "tpope/vim-fugitive"
-
   -- Indent guides
   use "lukas-reineke/indent-blankline.nvim"
 
