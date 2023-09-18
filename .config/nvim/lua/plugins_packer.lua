@@ -42,12 +42,6 @@ return require('packer').startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
 
-  -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate"
-  }
-
   -- Toggle terminal
   use {"akinsho/toggleterm.nvim"}
 
