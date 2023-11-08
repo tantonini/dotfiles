@@ -29,9 +29,6 @@ return require('packer').startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
 
-  -- Indent guides
-  use "lukas-reineke/indent-blankline.nvim"
-
   -- Config per project
   use 'windwp/nvim-projectconfig'
 
