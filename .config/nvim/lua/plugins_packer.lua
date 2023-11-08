@@ -29,9 +29,6 @@ return require('packer').startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
 
-  -- Toggle terminal
-  use {"akinsho/toggleterm.nvim"}
-
   -- Indent guides
   use "lukas-reineke/indent-blankline.nvim"
 
