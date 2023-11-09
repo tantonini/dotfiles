@@ -56,3 +56,7 @@ local options = {
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
+vim.opt.listchars:append "trail:⋅"
+vim.opt.listchars:append "lead: "
+vim.opt.listchars:append "tab:>—"
