@@ -12,7 +12,6 @@ set noignorecase                        " Case sensitive search
 set noswapfile                          " Do not write swap files
 set number                              " Show line number
 set tabstop=4                           " 4 spaces for tab
-set termguicolors                       " Enable 24-bit RGB color in TUI
 set undofile                            " Enable persistant undo
 set wildmode=longest:full               " Command completion like bash
 set wildoptions=pum                     " Command completion with popupmenu
