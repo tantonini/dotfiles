@@ -8,10 +8,14 @@ return {
       vim.cmd([[colorscheme nordfox]])
     end,
   },
-  { "folke/tokyonight.nvim", lazy = true},
-  { "navarasu/onedark.nvim", lazy = true},
-  { "marko-cerovac/material.nvim", lazy = true},
   { "rebelot/kanagawa.nvim", lazy = true},
-  { "rmehri01/onenord.nvim", lazy = true},
-  { "shaunsingh/nord.nvim", lazy = true},
+  {
+    "catppuccin/nvim",
+    lazy = true,
+    config = function()
+      require("catppuccin").setup({
+      flavour = "frappe", -- latte, frappe, macchiato, mocha
+      })
+    end
+  }
 }
