@@ -1,6 +1,9 @@
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPost", "BufNewFile", "BufWritePre" },
+  dependencies = {
+      "williamboman/mason.nvim",
+  },
   config = function()
     require("lspconfig").bashls.setup {}
     require("lspconfig").clangd.setup {}
