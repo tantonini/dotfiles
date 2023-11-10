@@ -1,12 +1,21 @@
-return {
+local M = {
   "lukas-reineke/indent-blankline.nvim",
   event = { "BufReadPost", "BufNewFile", "BufWritePre" },
-  opts = {
+}
+
+M.config = function()
+  require("ibl").setup {
+    enabled = true,
     indent = {
       char = "│",
       tab_char = "│",
     },
-    scope = { enabled = false },
-  },
-  main = "ibl",
-}
+    scope = {
+      enabled = true,
+      show_start = false,
+      show_end = false,
+    }
+  }
+end
+
+return M
