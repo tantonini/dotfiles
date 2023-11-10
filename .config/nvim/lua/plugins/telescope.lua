@@ -1,4 +1,4 @@
-return {
+local M = {
   'nvim-telescope/telescope.nvim', branch = '0.1.x',
   dependencies = { 'nvim-lua/plenary.nvim' },
   keys = {
@@ -6,3 +6,5 @@ return {
     { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope Grep" },
   }
 }
+
+return M
