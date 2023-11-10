@@ -1,38 +1,37 @@
-return {
+local M = {
   "nvim-tree/nvim-tree.lua",
   version = "*",
   lazy = false,
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
-  config = function()
-    require("nvim-tree").setup {
-      hijack_cursor = true,
-      update_cwd = true,
-      view = {
-        signcolumn = "no",
-      },
-      renderer = {
-        add_trailing = true,
-        highlight_opened_files = "all",
-        indent_markers = {
-          enable = true,
-          icons = {
-            corner = "└",
-            edge = "│ ",
-            none = "  ",
-          },
-        },
-      },
-      git = {
-        enable = false,
-      }
-    }
-  end,
   keys = {
     {"<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
   }
-},
+}
+
+M.config = function()
+  require("nvim-tree").setup {
+    update_focused_file = {
+      enable = true
+    },
+    hijack_cursor = true,
+    update_cwd = true,
+    view = {
+      signcolumn = "no",
+    },
+    renderer = {
+      add_trailing = true,
+      highlight_opened_files = "all",
+      indent_markers = {
+        enable = true,
+      },
+    },
+    git = {
+      enable = false,
+    }
+  }
+end
 
 vim.api.nvim_create_autocmd("BufEnter", {
   nested = true,
@@ -42,3 +41,5 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
   end
 })
+
+return M

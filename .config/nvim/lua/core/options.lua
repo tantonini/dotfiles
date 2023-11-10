@@ -1,3 +1,7 @@
+-- For nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.api.nvim_command([[
     function MyTabLabel(n)
       return substitute(getcwd(-1, a:n),$HOME,'~','')
