@@ -4,7 +4,8 @@ local M = {
   keys = {
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Telescope Find Files" },
     { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Telescope Grep" },
-  }
+  },
+  cmd = "Telescope",
 }
 
 return M
