@@ -13,6 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 config.color_scheme = 'nordfox'
+config.font = wezterm.font 'Hack Nerd Font'
 
 -- and finally, return the configuration to wezterm
 return config
