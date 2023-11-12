@@ -3,3 +3,4 @@
 .config/nvim/lazy-lock.json
 .config/nvim/projects/*
 !.config/nvim/projects/linux.lua
+.config/hypr/scripts/idle/idle
