@@ -9,3 +9,4 @@ ShowTerminalSizeHint=false
 
 [Scrolling]
 HistorySize=10000
+ScrollBarPosition=2
