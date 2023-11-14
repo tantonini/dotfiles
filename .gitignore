@@ -3,5 +3,6 @@
 .config/nvim/lazy-lock.json
 .config/nvim/projects/*
 !.config/nvim/projects/linux.lua
+.config/hypr/lid.conf
 .config/hypr/scripts/idle/idle
 .config/waybar/hyprland/temperature
