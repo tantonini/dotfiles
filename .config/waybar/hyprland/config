@@ -100,13 +100,20 @@
     "memory": {
         "format": "{}% "
     },
+    "include": [
+        "~/.config/waybar/hyprland/temperature",
+    ],
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // https://github.com/Alexays/Waybar/wiki/Module:-Temperature
+        // To set in include file:
+        // "thermal-zone": x,
+        // "hwmon-path": "path",
+
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "tooltip-format": "CPU: {temperatureC}°C"
     },
     "backlight": {
         // "device": "acpi_video1",
