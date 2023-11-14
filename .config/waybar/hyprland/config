@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["cpu", "memory", "temperature", "pulseaudio#speaker", "pulseaudio#mic", "battery", "tray", "clock"],
+    "modules-right": ["cpu", "memory", "temperature", "pulseaudio#speaker", "pulseaudio#mic", "battery", "hyprland/language", "tray", "clock"],
     // Modules configuration
      "hyprland/workspaces": {
          "disable-scroll": true,
@@ -169,6 +169,11 @@
         "reverse-scrolling": true,
         "on-scroll-up": "pamixer --default-source -i 1",
         "on-scroll-down": "pamixer --default-source -d 1"
+    },
+    "hyprland/language": {
+        "format": "{} 󰌌",
+        "format-en": "US",
+        "format-fr": "FR",
     },
     "custom/notification": {
         "tooltip": false,
