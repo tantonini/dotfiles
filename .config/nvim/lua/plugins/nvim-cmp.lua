@@ -25,7 +25,7 @@ M.config = function()
   local luasnip = require("luasnip")
   cmp.setup({
     completion = {
-      completeopt = "menu,menuone,noinsert",
+      completeopt = "menu,menuone,noselect",
     },
     snippet = {
       expand = function(args)
