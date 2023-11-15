@@ -121,7 +121,8 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "interval": 1,
+        "format": "{used:0.1f}GiB "
     },
     "include": [
         "~/.config/waybar/hyprland/temperature",
