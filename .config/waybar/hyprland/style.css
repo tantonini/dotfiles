@@ -21,7 +21,7 @@
 }
 
 #waybar {
-	font-family: 'Source Code Pro', sans-serif;
+	font-family: 'Hack Nerd Font';
 	font-size: 1.2em;
 	font-weight: 400;
   color: @base04;
@@ -85,14 +85,12 @@
   color: @base0C;
 }
 
-#clock {
-  margin-left: 0px;
-  margin-right: 4px;
-  background-color: transparent;
-}
-
 #temperature.critical {
   color: @base0F;
+}
+
+#clock {
+  font-family: sans-serif;
 }
 
 #window {
