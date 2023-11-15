@@ -1,4 +1,8 @@
 {
+    "include": [
+        "~/.config/waybar/hyprland/cpu",
+        "~/.config/waybar/hyprland/temperature",
+    ],
     "layer": "top", // Waybar at top layer
     "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 34, // Waybar height (to be removed for auto height)
@@ -116,16 +120,25 @@
                     }
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        // Add the following in cpu file:
+        // "format": "{icon0}{icon1}{icon2}{icon3}... ",
+
+        "interval": 1,
+        "format-icons": [
+             "<span color='#69ff94'>▁</span>", // green
+             "<span color='#2aa9ff'>▂</span>", // blue
+             "<span color='#f8f8f2'>▃</span>", // white
+             "<span color='#f8f8f2'>▄</span>", // white
+             "<span color='#ffffa5'>▅</span>", // yellow
+             "<span color='#ffffa5'>▆</span>", // yellow
+             "<span color='#ff9977'>▇</span>", // orange
+             "<span color='#dd532e'>█</span>"  // red
+        ]
     },
     "memory": {
         "interval": 1,
         "format": "{used:0.1f}GiB "
     },
-    "include": [
-        "~/.config/waybar/hyprland/temperature",
-    ],
     "temperature": {
         // https://github.com/Alexays/Waybar/wiki/Module:-Temperature
         // To set in include file:

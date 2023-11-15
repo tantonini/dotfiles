@@ -5,4 +5,5 @@
 !.config/nvim/projects/linux.lua
 .config/hypr/lid.conf
 .config/hypr/scripts/idle/idle
+.config/waybar/hyprland/cpu
 .config/waybar/hyprland/temperature
