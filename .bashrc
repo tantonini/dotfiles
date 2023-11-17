@@ -18,4 +18,8 @@ PS1="\[\033[38;5;246m\][\[$(tput sgr0)\]\[\033[38;5;117m\]\u@\h\[$(tput sgr0)\] 
 
 export PATH=~/.local/bin:"$PATH"
 
+# History size
+HISTSIZE=100000
+HISTFILESIZE=100000
+
 [[ -f ~/.bash_local ]] && . "$HOME/.bash_local"
