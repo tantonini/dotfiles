@@ -50,22 +50,7 @@
   color: rgba(238, 46, 36, 1);
 }
 
-#tray {
-  margin: 4px 4px 4px 4px;
-  border-radius: 4px;
-  background-color: @base02;
-}
-
-#tray * {
-  padding: 0 6px;
-  border-left: 1px solid @base00;
-}
-
-#tray *:first-child {
-  border-left: none;
-}
-
-#mode, #battery, #cpu, #memory, #network, #pulseaudio.speaker, #pulseaudio.mic, #idle_inhibitor, #backlight, #custom-storage, #custom-updates, #custom-weather, #custom-mail, #clock, #temperature, #language {
+#mode, #battery, #cpu, #memory, #network, #pulseaudio.speaker, #pulseaudio.mic, #idle_inhibitor, #backlight, #custom-storage, #custom-updates, #custom-weather, #custom-mail, #clock, #temperature, #language, #tray {
   margin: 4px 2px;
   padding: 0 6px;
   background-color: @base02;
@@ -91,6 +76,14 @@
 
 #clock {
   font-family: sans-serif;
+}
+
+#tray {
+  padding: 0 4px;
+}
+
+#tray menu {
+  background-color: @base02;
 }
 
 #window {
