@@ -21,9 +21,7 @@
 }
 
 #waybar {
-	font-family: 'sans-serif';
-	font-size: 1.2em;
-	font-weight: 400;
+  font-family: 'Noto Sans';
   color: @base04;
   background: @base01;
 }
@@ -72,10 +70,6 @@
 
 #temperature.critical {
   color: @base0F;
-}
-
-#clock {
-  font-family: sans-serif;
 }
 
 #tray {
