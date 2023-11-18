@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "hyprctl dispatch exit",
+    "action" : "killall waybar mako polkit-kde-authentication-agent-1 nm-applet wl-paste hyprland-per-window-layout sway-audio-idle-inhibit; hyprctl dispatch exit",
     "text" : "Logout",
     "keybind" : "e"
 }
