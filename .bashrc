@@ -39,4 +39,9 @@ osc7_cwd() {
 }
 PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }osc7_cwd
 
+# Yocto
+export BB_ENV_PASSTHROUGH_ADDITIONS="DL_DIR SSTATE_DIR"
+export DL_DIR="${HOME}/yocto-data/downloads"
+export SSTATE_DIR="${HOME}/yocto-data/sstate"
+
 [[ -f ~/.bash_local ]] && . "$HOME/.bash_local"
