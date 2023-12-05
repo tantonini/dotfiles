@@ -10,7 +10,7 @@ M.config = function()
       ensure_installed = "all",
       sync_install = false,
       highlight = { enable = true },
-      indent = { enable = true },
+      indent = { enable = false },
     }
 end
 
