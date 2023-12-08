@@ -64,3 +64,6 @@ end
 vim.opt.listchars:append "trail:⋅"
 vim.opt.listchars:append "lead: "
 vim.opt.listchars:append "tab:>—"
+
+vim.cmd.aunmenu{'PopUp.How-to\\ disable\\ mouse'}
+vim.cmd.aunmenu{'PopUp.-1-' }
