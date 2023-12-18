@@ -21,7 +21,7 @@
 }
 
 #waybar {
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans Mono';
   color: @base04;
   background: @base01;
 }

@@ -10,7 +10,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["cpu", "memory", "temperature", "pulseaudio#speaker", "pulseaudio#mic", "battery", "hyprland/language", "tray", "clock"],
+    "modules-right": ["cpu", "memory", "temperature", "network#download","network#upload", "pulseaudio#speaker", "pulseaudio#mic", "battery", "hyprland/language", "tray", "clock"],
     "fixed-center": false,
     // Modules configuration
      "hyprland/workspaces": {
@@ -179,14 +179,13 @@
     "battery#bat2": {
         "bat": "BAT2"
     },
-    "network": {
-        "interface": "wlan0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "network#download": {
+        "interval": 1,
+        "format": "{bandwidthDownBytes:>6} 󰁅",
+    },
+    "network#upload": {
+        "interval": 1,
+        "format": "{bandwidthUpBytes:>6} 󰁝",
     },
     "pulseaudio#speaker": {
         // "scroll-step": 10, // %, can be a float
