@@ -10,7 +10,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["cpu", "memory", "temperature", "network#download","network#upload", "pulseaudio#speaker", "pulseaudio#mic", "battery", "hyprland/language", "tray", "clock"],
+    "modules-right": ["cpu", "memory", "disk", "temperature", "network#download","network#upload", "pulseaudio#speaker", "pulseaudio#mic", "battery", "hyprland/language", "tray", "clock"],
     "fixed-center": false,
     // Modules configuration
      "hyprland/workspaces": {
@@ -140,6 +140,11 @@
         "interval": 1,
         "format": "{used:0.1f} GiB ",
         "tooltip-format": "{used:0.1f} GiB / {total:0.1f} GiB Used\n{avail:0.1f} GiB Available",
+    },
+    "disk": {
+        "interval": 30,
+        "format": "{used} 󰋊",
+        "path": "/"
     },
     "temperature": {
         // https://github.com/Alexays/Waybar/wiki/Module:-Temperature

@@ -48,7 +48,7 @@
   color: rgba(238, 46, 36, 1);
 }
 
-#mode, #battery, #cpu, #memory, #network, #pulseaudio.speaker, #pulseaudio.mic, #idle_inhibitor, #backlight, #custom-storage, #custom-updates, #custom-weather, #custom-mail, #clock, #temperature, #language, #tray {
+#mode, #battery, #cpu, #memory, #disk, #network, #pulseaudio.speaker, #pulseaudio.mic, #idle_inhibitor, #backlight, #custom-storage, #custom-updates, #custom-weather, #custom-mail, #clock, #temperature, #language, #tray {
   margin: 4px 2px;
   padding: 0 6px;
   background-color: @base02;
