@@ -14,7 +14,7 @@ M.config = function()
     has_cmp and cmp_nvim_lsp.default_capabilities() or {}
   )
 
-  local servers = { 'bashls', 'clangd', 'cmake', 'lua_ls', 'rust_analyzer' }
+  local servers = { 'bashls', 'clangd', 'cmake', 'lua_ls', 'pyright', 'rust_analyzer' }
   for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
       capabilities = capabilities,
