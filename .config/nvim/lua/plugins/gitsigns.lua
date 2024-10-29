@@ -1,6 +1,9 @@
 local M = {
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPost", "BufNewFile", "BufWritePre" },
+  keys = {
+    { "<leader>gb", "<cmd>Gitsigns blame<cr>", desc = "Gitsigns blame" },
+  },
   cmd = "Gitsigns",
 }
 
