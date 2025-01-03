@@ -51,6 +51,7 @@ local options = {
   smartindent = true,                      -- make indenting smarter again
   swapfile = false,                        -- creates a swapfile
   termguicolors = true,                    -- set term gui colors (most terminals support this)
+  title = true,                            -- set window title
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
   tabline = "%!MyTabLine()",
