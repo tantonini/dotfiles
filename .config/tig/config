@@ -1,1 +1,7 @@
+# Show commit id column
 set main-view-id-display = yes
+
+# Use Git's default (reverse chronological) order, never automatically
+# use topo-order for the commit graph
+# Permits to open faster on large repos
+set commit-order = default
