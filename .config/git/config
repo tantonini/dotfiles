@@ -2,3 +2,5 @@
         editor = vim
 [alias]
         fap = fetch --all --prune --tags
+[color]
+	ui = auto
