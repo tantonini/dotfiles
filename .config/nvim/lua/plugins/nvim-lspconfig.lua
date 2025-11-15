@@ -1,7 +1,5 @@
 local M = {
-  "neovim/nvim-lspconfig",
-  event = { "BufReadPost", "BufNewFile", "BufWritePre" },
-  cmd = {"LspInfo", "LspLog", "LspRestart", "LspStart", "LspStop"}
+  "neovim/nvim-lspconfig"
 }
 
 M.config = function()
