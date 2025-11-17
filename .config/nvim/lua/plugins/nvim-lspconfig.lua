@@ -3,8 +3,6 @@ local M = {
 }
 
 M.config = function()
-  local has_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-
   local servers = { 'bashls', 'clangd', 'cmake', 'lua_ls', 'pyright', 'rust_analyzer' }
   for _, lsp in ipairs(servers) do
     vim.lsp.enable(lsp)
@@ -59,6 +57,24 @@ M.config = function()
     settings = {
       Lua = {}
     }
+  })
+
+  --- Enable auto-completion
+  vim.api.nvim_create_autocmd('LspAttach', {
+    group = vim.api.nvim_create_augroup('my.lsp', {}),
+    callback = function(args)
+      local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+      if client:supports_method('textDocument/implementation') then
+        -- Create a keymap for vim.lsp.buf.implementation ...
+      end
+      -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
+      if client:supports_method('textDocument/completion') then
+        -- Optional: trigger autocompletion on EVERY keypress. May be slow!
+        local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
+        client.server_capabilities.completionProvider.triggerCharacters = chars
+        vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+      end
+    end,
   })
 
   -- Use LspAttach autocommand to only map the following keys
