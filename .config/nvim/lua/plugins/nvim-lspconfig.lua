@@ -87,7 +87,6 @@ M.config = function()
       local opts = { buffer = ev.buf }
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, vim.tbl_extend("force", {desc = "LSP: Go to declaration"}, opts))
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, vim.tbl_extend("force", {desc = "LSP: Go to definition"}, opts))
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, vim.tbl_extend("force", {desc = "LSP: Hover"}, opts))
       vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, vim.tbl_extend("force", {desc = "LSP: Add workspace folder"}, opts))
       vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, vim.tbl_extend("force", {desc = "LSP: Remove workspace folder"}, opts))
       vim.keymap.set('n', '<space>wl', function()
