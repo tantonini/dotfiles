@@ -8,4 +8,14 @@ local M = {
   cmd = "Telescope",
 }
 
+M.config = function()
+  require("telescope").setup({
+    defaults = {
+      preview = {
+        treesitter = false,
+      },
+    },
+  })
+end
+
 return M
