@@ -7,3 +7,4 @@
 .config/hypr/scripts/idle/idle
 .config/waybar/hyprland/cpu
 .config/waybar/hyprland/temperature
+.config/git/.repo_config.json
